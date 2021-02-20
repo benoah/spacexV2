@@ -10020,7 +10020,7 @@ header .hamburger span:nth-child(3) {
 }
 .jumbotron {
   background-color: transparent !important;
-  margin-top: 80px;
+  margin-top: 128px;
 }
 
 .next-launch {
@@ -10073,6 +10073,12 @@ header .hamburger span:nth-child(3) {
   margin-left: 16px;
 }
 
+@media screen and (max-width: 812px) {
+  .jumbotronTitle,
+.jumbotron h1 {
+    font-size: 32px;
+  }
+}
 .btn {
   position: relative;
   padding: 0 15px;
@@ -10102,6 +10108,30 @@ header .hamburger span:nth-child(3) {
 .btn-primary.active {
   background-color: rgba(222, 102, 0, 0.5);
   color: #f1f1f1;
+}
+
+.timerlaunch {
+  color: #fc0;
+  background: rgba(0, 35, 71, 0.5);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.timerlaunch p {
+  color: #f1f1f1;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.timerlaunchCategory {
+  display: block;
+  position: relative;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #fc0;
+  margin-bottom: 24px;
 }
 
 .wrapper {

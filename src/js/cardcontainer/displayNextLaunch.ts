@@ -10,25 +10,19 @@ export default function displayNextLaunch(data) {
 
 
   nextLaunchContainer.innerHTML = `  
-    <article class="jumbotron">
-      <div class="row">
-        <div id="special" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <header class="jumbotronHeader">
-            <small class="jumbotronCategory " id="jumbotronCategory">
-            ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
-            </small>
-            <h1 class="jumbotronTitle " id="jumbotronTitle">
-            ${new Intl.DateTimeFormat("en-US", options).format(month)}<span>${year}</span></h1>
-            <h2 class"jumbotronName">${data.name}</h2>
-            <p class="flight-nr">Flight-nr: ${data.flight_number}</p>
-            <footer class="jumbotronFooter" id="jumbotronFooter">
-            <a class="btn btn-primary" href="#" role="button">Start at ${hours}pm</a>
-          </footer>
-          </header>
-        </div>
-      </div>
-  </div>
-</article>`;
+  <div class="jumbotron">
+  <small class="jumbotronCategory " id="jumbotronCategory">
+  ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
+  </small>
+  <h1 class="display-4">${new Intl.DateTimeFormat("en-US", options).format(month)}<span>${year}</span></h1>
+  <h1 class="display-4">${data.name}</span></h1>
+  <hr class="my-4">
+  <p>Flight-nr: ${data.flight_number}</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Start at ${hours}pm</a>
+  </p>
+</div>
+  `;
 
 
   setInterval(() => {
@@ -53,7 +47,7 @@ export default function displayNextLaunch(data) {
           hours %= 24;
           min %= 60;
           sec %= 60;
-          
+
           day.innerHTML = `${days}`;
           hrs.innerHTML = `${hours < 10 ? "0" : ""} ${hours}`;
           minutes.innerHTML = `${min < 10 ? "0" : ""} ${min}`;
@@ -68,3 +62,26 @@ export default function displayNextLaunch(data) {
   }, 1000);
 
 }
+/*
+  <article class="jumbotron">
+           <div id="special" class="col">
+          <header class="jumbotronHeader">
+            <small class="jumbotronCategory " id="jumbotronCategory">
+            ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
+            </small>
+
+            
+            <h1 class="jumbotronTitle " id="jumbotronTitle">
+            ${new Intl.DateTimeFormat("en-US", options).format(month)}<span>${year}</span></h1>
+            <h2 class"jumbotronName">${data.name}</h2>
+            <p class="flight-nr">Flight-nr: ${data.flight_number}</p>
+            <footer class="jumbotronFooter" id="jumbotronFooter">
+            <a class="btn btn-primary" href="#" role="button">Start at ${hours}pm</a>
+          </footer>
+          </header>
+        </div>
+  
+  </div>
+</article>
+
+*/

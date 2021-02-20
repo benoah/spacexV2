@@ -18358,7 +18358,7 @@ function displayNextLaunch(data) {
   };
   var today = new Date();
   var hours = today.getHours();
-  nextLaunchContainer.innerHTML = "  \n    <article class=\"jumbotron\">\n      <div class=\"row\">\n        <div id=\"special\" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n          <header class=\"jumbotronHeader\">\n            <small class=\"jumbotronCategory \" id=\"jumbotronCategory\">\n            " + (today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch") + "\n            </small>\n            <h1 class=\"jumbotronTitle \" id=\"jumbotronTitle\">\n            " + new Intl.DateTimeFormat("en-US", options).format(month) + "<span>" + year + "</span></h1>\n            <h2 class\"jumbotronName\">" + data.name + "</h2>\n            <p class=\"flight-nr\">Flight-nr: " + data.flight_number + "</p>\n            <footer class=\"jumbotronFooter\" id=\"jumbotronFooter\">\n            <a class=\"btn btn-primary\" href=\"#\" role=\"button\">Start at " + hours + "pm</a>\n          </footer>\n          </header>\n        </div>\n      </div>\n  </div>\n</article>";
+  nextLaunchContainer.innerHTML = "  \n  <div class=\"jumbotron\">\n  <small class=\"jumbotronCategory \" id=\"jumbotronCategory\">\n  " + (today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch") + "\n  </small>\n  <h1 class=\"display-4\">" + new Intl.DateTimeFormat("en-US", options).format(month) + "<span>" + year + "</span></h1>\n  <h1 class=\"display-4\">" + data.name + "</span></h1>\n  <hr class=\"my-4\">\n  <p>Flight-nr: " + data.flight_number + "</p>\n  <p class=\"lead\">\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Start at " + hours + "pm</a>\n  </p>\n</div>\n  ";
   setInterval(function () {
     var nextLaunchDate = new Date(data.date_local);
     var countDownDate = new Date(nextLaunchDate).getTime();
@@ -18393,6 +18393,50 @@ function displayNextLaunch(data) {
 }
 
 exports.default = displayNextLaunch;
+/*
+  <article class="jumbotron">
+           <div id="special" class="col">
+          <header class="jumbotronHeader">
+            <small class="jumbotronCategory " id="jumbotronCategory">
+            ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
+            </small>
+
+            
+            <h1 class="jumbotronTitle " id="jumbotronTitle">
+            ${new Intl.DateTimeFormat("en-US", options).format(month)}<span>${year}</span></h1>
+            <h2 class"jumbotronName">${data.name}</h2>
+            <p class="flight-nr">Flight-nr: ${data.flight_number}</p>
+            <footer class="jumbotronFooter" id="jumbotronFooter">
+            <a class="btn btn-primary" href="#" role="button">Start at ${hours}pm</a>
+          </footer>
+          </header>
+        </div>
+  
+  </div>
+</article>
+
+*/
+},{}],"js/cardcontainer/createRocketCards.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function createRocketCards(rockets) {
+  var cardsContainer = document.querySelector(".cards");
+  rockets.forEach(function (rocket) {
+    var img = rocket.flickr_images[1];
+
+    if (img.includes("imgur")) {
+      img = "img/spacex-6.png";
+    }
+
+    cardsContainer.innerHTML += "\n        <div class=\" col-md-3\">\n        <div class=\" card h-100 \">\n            <img class=\"card-img-top \" src=\"" + img + "\" alt=\"Card image cap\">\n            <div class=\"card-body\" >\n                <h3 class=\"card-title\">" + rocket.name + "</h3>\n                <p class=\"card-text\">" + rocket.description + "</p>\n                </div>\n                <a class=\" btn btn-primary\" href=\"detail.html?id=" + rocket.id + "\" > Details</a>\n\n        </div>\n\n    </div> ";
+  });
+}
+
+exports.default = createRocketCards;
 },{}],"js/script.ts":[function(require,module,exports) {
 "use strict";
 
@@ -18548,6 +18592,7 @@ var __importDefault = this && this.__importDefault || function (mod) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.ROCKETS_URL = void 0;
 
 require("../sass/style.scss"); // Import our scss file
 
@@ -18558,8 +18603,11 @@ require("@fortawesome/fontawesome-free/css/all.css");
 
 var displayNextLaunch_1 = __importDefault(require("./cardcontainer/displayNextLaunch"));
 
+var createRocketCards_1 = __importDefault(require("./cardcontainer/createRocketCards"));
+
 console.log("hello");
 var NEXT_LAUNCH = "https://api.spacexdata.com/v4/launches/next";
+exports.ROCKETS_URL = "https://api.spacexdata.com/v4/rockets";
 
 function getNextLaunch() {
   return __awaiter(this, void 0, void 0, function () {
@@ -18604,7 +18652,52 @@ function getNextLaunch() {
 }
 
 getNextLaunch();
-},{"../sass/style.scss":"sass/style.scss","bootstrap":"../node_modules/bootstrap/dist/js/bootstrap.js","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./cardcontainer/displayNextLaunch":"js/cardcontainer/displayNextLaunch.ts"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function getRockets() {
+  return __awaiter(this, void 0, void 0, function () {
+    var response, json, data, rocketsArray, error_2;
+    return __generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          _a.trys.push([0, 3,, 4]);
+
+          return [4
+          /*yield*/
+          , fetch(exports.ROCKETS_URL)];
+
+        case 1:
+          response = _a.sent();
+          return [4
+          /*yield*/
+          , response.json()];
+
+        case 2:
+          json = _a.sent();
+          data = json;
+          rocketsArray = data;
+          createRocketCards_1.default(rocketsArray);
+          return [3
+          /*break*/
+          , 4];
+
+        case 3:
+          error_2 = _a.sent();
+          console.log(error_2);
+          return [3
+          /*break*/
+          , 4];
+
+        case 4:
+          return [2
+          /*return*/
+          ];
+      }
+    });
+  });
+}
+
+getRockets();
+},{"../sass/style.scss":"sass/style.scss","bootstrap":"../node_modules/bootstrap/dist/js/bootstrap.js","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./cardcontainer/displayNextLaunch":"js/cardcontainer/displayNextLaunch.ts","./cardcontainer/createRocketCards":"js/cardcontainer/createRocketCards.ts"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -18632,7 +18725,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55672" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59534" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
