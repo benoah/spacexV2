@@ -7,7 +7,7 @@ export default function createRocketCards(rockets) {
             img = "img/spacex-6.png";
         }
         cardsContainer.innerHTML += `
-        <div class=" col-md-3">
+        <div class=" col">
         <div class=" card h-100 ">
             <img class="card-img-top " src="${img}" alt="Card image cap">
             <div class="card-body" >
@@ -15,7 +15,6 @@ export default function createRocketCards(rockets) {
                 <p class="card-text">${rocket.description}</p>
                 </div>
                 <a class=" btn btn-primary" href="detail.html?id=${rocket.id}" > Details</a>
-
         </div>
 
     </div> `;

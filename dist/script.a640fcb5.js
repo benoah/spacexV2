@@ -18358,7 +18358,7 @@ function displayNextLaunch(data) {
   };
   var today = new Date();
   var hours = today.getHours();
-  nextLaunchContainer.innerHTML = "  \n  <div class=\"jumbotron\">\n  <small class=\"jumbotronCategory \" id=\"jumbotronCategory\">\n  " + (today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch") + "\n  </small>\n  <h1 class=\"display-4\">" + new Intl.DateTimeFormat("en-US", options).format(month) + "<span>" + year + "</span></h1>\n  <h1 class=\"display-4\">" + data.name + "</span></h1>\n  <hr class=\"my-4\">\n  <p>Flight-nr: " + data.flight_number + "</p>\n  <p class=\"lead\">\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Start at " + hours + "pm</a>\n  </p>\n</div>\n  ";
+  nextLaunchContainer.innerHTML = "  \n  <small class=\"jumbotronCategory \" id=\"jumbotronCategory\">\n  " + (today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch") + "\n  </small>\n  <h1 class=\"display-4\">" + new Intl.DateTimeFormat("en-US", options).format(month) + "<span>" + year + "</span></h1>\n  <h1 class=\"display-4\">" + data.name + "</span></h1>\n  <hr class=\"my-4\">\n  <p>Flight-nr: " + data.flight_number + "</p>\n  <p class=\"lead\">\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Start at " + hours + "pm</a>\n  </p>\n  ";
   setInterval(function () {
     var nextLaunchDate = new Date(data.date_local);
     var countDownDate = new Date(nextLaunchDate).getTime();
@@ -18432,7 +18432,7 @@ function createRocketCards(rockets) {
       img = "img/spacex-6.png";
     }
 
-    cardsContainer.innerHTML += "\n        <div class=\" col-md-3\">\n        <div class=\" card h-100 \">\n            <img class=\"card-img-top \" src=\"" + img + "\" alt=\"Card image cap\">\n            <div class=\"card-body\" >\n                <h3 class=\"card-title\">" + rocket.name + "</h3>\n                <p class=\"card-text\">" + rocket.description + "</p>\n                </div>\n                <a class=\" btn btn-primary\" href=\"detail.html?id=" + rocket.id + "\" > Details</a>\n\n        </div>\n\n    </div> ";
+    cardsContainer.innerHTML += "\n        <div class=\" col\">\n        <div class=\" card h-100 \">\n            <img class=\"card-img-top \" src=\"" + img + "\" alt=\"Card image cap\">\n            <div class=\"card-body\" >\n                <h3 class=\"card-title\">" + rocket.name + "</h3>\n                <p class=\"card-text\">" + rocket.description + "</p>\n                </div>\n                <a class=\" btn btn-primary\" href=\"detail.html?id=" + rocket.id + "\" > Details</a>\n        </div>\n\n    </div> ";
   });
 }
 

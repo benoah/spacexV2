@@ -10,7 +10,6 @@ export default function displayNextLaunch(data) {
 
 
   nextLaunchContainer.innerHTML = `  
-  <div class="jumbotron">
   <small class="jumbotronCategory " id="jumbotronCategory">
   ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
   </small>
@@ -21,7 +20,6 @@ export default function displayNextLaunch(data) {
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="#" role="button">Start at ${hours}pm</a>
   </p>
-</div>
   `;
 
 
