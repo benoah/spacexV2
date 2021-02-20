@@ -1,0 +1,87 @@
+
+.jumbotron{
+    background-color: transparent !important;
+    margin-top: 80px;
+  }
+  
+  .next-launch {
+    color: #f1f1f1;
+  }  
+
+  .jumbotronTitle,
+  .jumbotron h1 {
+    font-weight: 700;
+    font-family: "Ek Mukta", sans-serif;
+    text-transform: uppercase;
+    color: #fc0;
+    letter-spacing: 0.4em;
+    margin-bottom: 16px;
+    mix-blend-mode: color-dodge;
+    margin-top: 32px;
+  }
+  
+  .jumbotronCategory {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  .jumbotronCategory::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 16px;
+    height: 2px;
+    background-color: #fc0;
+    mix-blend-mode: color-dodge;    
+  }
+
+  .jumbotron h2 {
+    font-weight: 500;
+    font-family: "Ek Mukta", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    mix-blend-mode: color-dodge;
+   color: #fc0;
+  }
+
+
+  .jumbotron span {
+    margin-left: 16px;
+  }
+  
+
+  .btn {
+    position: relative;
+    padding: 0 15px;
+    border-width: 2px;
+    height: 40px;
+    font-weight: 700;
+    font-family: "Ek Mukta", sans-serif;
+    font-size: 16px;
+    line-height: 38px;
+    border-radius: 0;
+    transition: ease-in-out 0.3s;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .btn-primary,
+  .btn-primary:link,
+  .btn-primary:visited {
+    border-color: #fc0;
+    background-color: transparent;
+    color: #fc0;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active {
+    background-color: rgba(222, 102, 0, 0.5);
+    color: #f1f1f1;
+  }

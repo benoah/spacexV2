@@ -9,7 +9,93 @@
 </head>
 
 <body>
-    hallo
+    <div class="wrapper">
+        <header>
+            <nav class="navbar fixed-top sticky-top navbar-expand-lg">
+                <dic class="container navcontainer">
+                    <a class="navbar-brand" href="#">Space<span>X</span></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+
+                    </button>
+                    <div class="collapse navbar-collapse flex-row-reverse " id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html"><span></span>Home<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span>
+                                    </span>Launches</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span></span>Rockets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span></span>Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </dic>
+            </nav>
+        </header>
+        <div class="container">
+            <div class=" next-launch">
+            </div>
+        </div>
+
+
+        <div class="container timerlaunch">
+            <small class="timerlaunchCategory " id="timerlaunchCategory">
+                Next Launch </small>
+            <div class="row timerlaunch-counter">
+                <div class="col countdown" id="countDown">
+                    <div class="countdown__counter">
+                        <p>Days</p>
+                        <span id="days"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="countdown__counter">
+                        <p>hours</p>
+                        <span id="hours"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="countdown__counter">
+                        <p>min</p>
+                        <span id="min"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="countdown__counter">
+                        <p>sec</p>
+                        <span class="sec" id="sec"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
     <script src="js/script.ts"></script>
 </body>
 

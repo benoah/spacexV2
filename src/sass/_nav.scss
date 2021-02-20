@@ -1,0 +1,94 @@
+// navbar main
+.navbar-brand {
+    font-family: "karla", sans-serif;
+    text-transform: uppercase;
+    color: #de6600;
+    letter-spacing: 0.4rem;
+    text-decoration: none;
+    transition: all 3s ease-in-out; 
+  }
+  header .hamburger {
+    margin-top: 8px;
+  }
+  
+  header .hamburger span {
+    height: 2px;
+    background: #fc0;
+    display: block;
+    border: none;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    margin-top: 4px;
+  }
+  
+  header .hamburger span:nth-child(1) {
+    width: 100%;
+    margin-bottom: 0.313rem;
+  }
+  
+  header .hamburger span:nth-child(2) {
+    width: 80%;
+    margin-bottom: 0.313rem;
+    margin-top: 0.313rem;
+  }
+  header .hamburger span:nth-child(3) {
+    width: 60%;
+    margin-top: 0.313rem;
+  }
+
+  .navbar-collapse {
+    height: 100vh;
+  }
+
+  .navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: rgba(0, 35, 71, 0.5);
+}
+
+
+.nav-item{
+    padding: 32px;
+}
+.nav-item  a{
+    padding: 32px;
+    mix-blend-mode: color-dodge;
+}
+
+  // navbar mobile, ipad.
+
+  @media screen and (max-width: 812px) {
+    .nav-item .nav-link {
+      text-decoration: none;
+      color: #fc0;
+      padding-bottom: 0.313rem;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding: 32px;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  
+
+  @media screen and (min-width: 812px) {
+    .nav-item  a{
+        padding: 0px;
+        mix-blend-mode: color-dodge;
+    }
+
+
+    .nav-link {
+        color: #fc0;
+        text-decoration: none;
+        padding-left: 4px;
+        font-size: 14px;
+        letter-spacing: 0.2em;
+        margin-top: 8px;
+        mix-blend-mode: color-dodge;
+      }
+      .navbar-collapse {
+        height: 0;
+      }
+      
+  }

@@ -1,5 +1,25 @@
 @import "~bootstrap/scss/bootstrap";
+@import "_nav.scss";
+@import "_jumbocard.scss";
 
-body{
-    background: green;
-}
+.wrapper {
+    background-image: url(../../src/img/altinay-dinc-LluELtL5mK4-unsplash.jpg);
+    font-family: "Ek Mukta", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+
+
+
+
+/*  src/img/altinay-dinc-LluELtL5mK4-unsplash.jpg
+
+  src/img/altinay-dinc-LluELtL5mK4-unsplash.jpg
+
+  /Users/kristine/Desktop/spacexV2/src/img/altinay-dinc-LluELtL5mK4-unsplash.jpg*/ 
