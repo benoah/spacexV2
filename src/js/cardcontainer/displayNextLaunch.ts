@@ -13,10 +13,9 @@ export default function displayNextLaunch(data) {
   <small class="jumbotronCategory " id="jumbotronCategory">
   ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
   </small>
-  <h1 class="display-4">${new Intl.DateTimeFormat("en-US", options).format(month)}<span>${year}</span></h1>
-  <h1 class="display-4">${data.name}</span></h1>
-  <hr class="my-4">
-  <p>Flight-nr: ${data.flight_number}</p>
+  <h3 class="jumbotronHeaderone">${new Intl.DateTimeFormat("en-US", options).format(month)}<span class="year">${year}</span></h3>
+  <h5 class="jumbotronHeadertwo">${data.name}</span></h5>
+  <p class ="Flight-nr">Flight-nr: ${data.flight_number}</p>
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="#" role="button">Start at ${hours}pm</a>
   </p>

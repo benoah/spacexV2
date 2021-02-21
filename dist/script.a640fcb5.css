@@ -10019,34 +10019,24 @@ header .hamburger span:nth-child(3) {
     height: 0;
   }
 }
-.jumbotron {
-  background-color: transparent !important;
-}
-
 .next-launch {
-  color: #f1f1f1;
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
-.jumbotronTitle,
-.jumbotron h1 {
-  font-weight: 700;
-  font-family: "Ek Mukta", sans-serif;
-  text-transform: uppercase;
-  color: #fc0;
-  letter-spacing: 0.4em;
-  margin-bottom: 16px;
-  mix-blend-mode: color-dodge;
-  margin-top: 32px;
+.Flight-nr {
+  color: #f1f1f1;
+  margin-bottom: 32px;
 }
 
 .jumbotronCategory {
   display: block;
   position: relative;
   padding-left: 24px;
-  font-size: 16px;
   line-height: 1.3;
-  margin-bottom: 16px;
+  color: #f1f1f1;
+  margin-bottom: 32px;
 }
 
 .jumbotronCategory::before {
@@ -10054,32 +10044,37 @@ header .hamburger span:nth-child(3) {
   display: block;
   position: absolute;
   left: 0;
-  top: 9px;
+  top: 6px;
   width: 16px;
   height: 2px;
   background-color: #fc0;
   mix-blend-mode: color-dodge;
 }
 
-.jumbotron h2 {
-  font-weight: 500;
+.jumbotronHeaderone {
+  font-weight: 700;
   font-family: "Ek Mukta", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  mix-blend-mode: color-dodge;
   color: #fc0;
+  letter-spacing: 0.4em;
+  mix-blend-mode: color-dodge;
+  margin-bottom: 24px;
 }
 
-.jumbotron span {
+.year {
   margin-left: 16px;
 }
 
-@media screen and (max-width: 812px) {
-  .jumbotronTitle,
-.jumbotron h1 {
-    font-size: 32px;
-  }
+.jumbotronHeadertwo {
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  text-transform: uppercase;
+  color: #fc0;
+  letter-spacing: 0.4em;
+  mix-blend-mode: color-dodge;
+  margin-bottom: 48px;
 }
+
 .btn {
   position: relative;
   padding: 0 15px;
@@ -10091,8 +10086,6 @@ header .hamburger span:nth-child(3) {
   line-height: 38px;
   border-radius: 0;
   transition: ease-in-out 0.3s;
-  margin-top: 24px;
-  margin-bottom: 40px;
 }
 
 .btn-primary,
@@ -10111,12 +10104,30 @@ header .hamburger span:nth-child(3) {
   color: #f1f1f1;
 }
 
+@media screen and (min-width: 812px) {
+  .jumbotronHeaderone {
+    font-size: 56px;
+  }
+
+  .jumbotronHeadertwo {
+    font-size: 48px;
+  }
+}
 .timerlaunch {
   color: #fc0;
   background: rgba(0, 35, 71, 0.5);
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
+  padding: 16px;
+  margin-top: 64px;
+}
+
+.timerlaunchCategory {
+  display: block;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timerlaunch span {
+  margin-left: 8px;
 }
 
 .timerlaunch p {
@@ -10132,7 +10143,7 @@ header .hamburger span:nth-child(3) {
   font-size: 16px;
   line-height: 1.3;
   color: #fc0;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .wrapper {
