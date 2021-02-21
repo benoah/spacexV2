@@ -17,6 +17,7 @@ export const ROCKETS_URL = `https://api.spacexdata.com/v4/rockets`;
 let ABOUT_URL = `https://api.spacexdata.com/v4/company`;
 
 
+
 // async functions that are grabbing data we can use
 // get data for displaynextlauch
 async function getNextLaunch() {
