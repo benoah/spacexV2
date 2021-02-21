@@ -28,7 +28,7 @@
   width: 16px;
   height: 2px;
   background-color: #fc0;
-  mix-blend-mode: color-dodge;    
+  
 }
 
 .jumbotronHeaderone {
@@ -48,9 +48,8 @@
   font-weight: 700;
   font-family: "Ek Mukta", sans-serif;
   text-transform: uppercase;
-  color: #fc0;
+  color: #f1f1f1;
   letter-spacing: 0.4em;
-  mix-blend-mode: color-dodge;
   margin-bottom:48px;
 }
 
@@ -75,6 +74,7 @@
   border-color: #fc0;
   background-color: transparent;
   color: #fc0;
+  mix-blend-mode: color-dodge;
 }
 
 .btn-primary:hover,
@@ -93,7 +93,7 @@
   }
 
   .jumbotronHeadertwo {
-    font-size: 48px;
+    font-size: 32px;
 
   }
   

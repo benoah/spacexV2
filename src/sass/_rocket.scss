@@ -1,0 +1,78 @@
+.cardscontainer {
+    margin-top: 80px;
+  }
+
+  .cardTitle {
+    position: relative;
+    font-weight: 700;
+    font-family: "Ek Mukta", sans-serif;
+    text-transform: uppercase;
+    color: #fc0;
+    mix-blend-mode: color-dodge;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+    padding-left: 24px;
+  }
+  .cardTitle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 16px;
+    width: 16px;
+    height: 2px;
+    background-color: #fc0;
+    display: block;
+    mix-blend-mode: color-dodge;
+  }
+  .card {
+    color: #f1f1f1;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgba(0, 35, 71, 0.5);
+    
+  }
+
+
+
+
+  @media screen and (min-width: 812px) { 
+   
+ .card-text{
+    line-height: 1.1;
+    margin-top: 0.1em;
+    width: 100%;
+   
+    
+ }
+    
+  
+  }
+
+
+
+
+
+
+  /*
+
+
+  .card img {
+    object-fit: cover;
+    background: rgba(0, 35, 71, 0.5);
+  }
+  
+
+  .card-body h3 {
+    color: #fc0;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .card-text {
+    color: #f1f1f1;
+    line-height: 1.3;
+  }
+  */

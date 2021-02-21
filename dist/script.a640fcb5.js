@@ -18341,7 +18341,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../webfonts/fa-brands-400.eot":[["fa-brands-400.7b5acd02.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"./../webfonts/fa-brands-400.woff2":[["fa-brands-400.34cc846b.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"./../webfonts/fa-brands-400.woff":[["fa-brands-400.75159956.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"./../webfonts/fa-brands-400.ttf":[["fa-brands-400.f885063e.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"./../webfonts/fa-brands-400.svg":[["fa-brands-400.1f0eb095.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"./../webfonts/fa-regular-400.eot":[["fa-regular-400.d4b9b17f.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"./../webfonts/fa-regular-400.woff2":[["fa-regular-400.82c42f2f.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"./../webfonts/fa-regular-400.woff":[["fa-regular-400.adc5c7aa.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"./../webfonts/fa-regular-400.ttf":[["fa-regular-400.b073eab5.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"./../webfonts/fa-regular-400.svg":[["fa-regular-400.16d6ac71.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"./../webfonts/fa-solid-900.eot":[["fa-solid-900.0b60ff24.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"./../webfonts/fa-solid-900.woff2":[["fa-solid-900.55d5ef42.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"./../webfonts/fa-solid-900.woff":[["fa-solid-900.f824330b.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"./../webfonts/fa-solid-900.ttf":[["fa-solid-900.47a039f3.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"./../webfonts/fa-solid-900.svg":[["fa-solid-900.d08d5f59.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js"}],"js/cardcontainer/displayNextLaunch.ts":[function(require,module,exports) {
+},{"./../webfonts/fa-brands-400.eot":[["fa-brands-400.7b5acd02.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"./../webfonts/fa-brands-400.woff2":[["fa-brands-400.34cc846b.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"./../webfonts/fa-brands-400.woff":[["fa-brands-400.75159956.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"./../webfonts/fa-brands-400.ttf":[["fa-brands-400.f885063e.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"./../webfonts/fa-brands-400.svg":[["fa-brands-400.1f0eb095.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"./../webfonts/fa-regular-400.eot":[["fa-regular-400.d4b9b17f.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"./../webfonts/fa-regular-400.woff2":[["fa-regular-400.82c42f2f.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"./../webfonts/fa-regular-400.woff":[["fa-regular-400.adc5c7aa.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"./../webfonts/fa-regular-400.ttf":[["fa-regular-400.b073eab5.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"./../webfonts/fa-regular-400.svg":[["fa-regular-400.16d6ac71.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"./../webfonts/fa-solid-900.eot":[["fa-solid-900.0b60ff24.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"./../webfonts/fa-solid-900.woff2":[["fa-solid-900.55d5ef42.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"./../webfonts/fa-solid-900.woff":[["fa-solid-900.f824330b.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"./../webfonts/fa-solid-900.ttf":[["fa-solid-900.47a039f3.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"./../webfonts/fa-solid-900.svg":[["fa-solid-900.d08d5f59.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js"}],"js/displayNextLaunch.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18393,30 +18393,7 @@ function displayNextLaunch(data) {
 }
 
 exports.default = displayNextLaunch;
-/*
-  <article class="jumbotron">
-           <div id="special" class="col">
-          <header class="jumbotronHeader">
-            <small class="jumbotronCategory " id="jumbotronCategory">
-            ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
-            </small>
-
-            
-            <h1 class="jumbotronTitle " id="jumbotronTitle">
-            ${new Intl.DateTimeFormat("en-US", options).format(month)}<span>${year}</span></h1>
-            <h2 class"jumbotronName">${data.name}</h2>
-            <p class="flight-nr">Flight-nr: ${data.flight_number}</p>
-            <footer class="jumbotronFooter" id="jumbotronFooter">
-            <a class="btn btn-primary" href="#" role="button">Start at ${hours}pm</a>
-          </footer>
-          </header>
-        </div>
-  
-  </div>
-</article>
-
-*/
-},{}],"js/cardcontainer/createRocketCards.ts":[function(require,module,exports) {
+},{}],"js/createRocketCards.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18429,14 +18406,54 @@ function createRocketCards(rockets) {
     var img = rocket.flickr_images[1];
 
     if (img.includes("imgur")) {
-      img = "img/spacex-6.png";
+      img = "https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80";
     }
 
-    cardsContainer.innerHTML += "\n        <div class=\" col\">\n        <div class=\" card h-100 \">\n            <img class=\"card-img-top \" src=\"" + img + "\" alt=\"Card image cap\">\n            <div class=\"card-body\" >\n                <h3 class=\"card-title\">" + rocket.name + "</h3>\n                <p class=\"card-text\">" + rocket.description + "</p>\n                </div>\n                <a class=\" btn btn-primary\" href=\"detail.html?id=" + rocket.id + "\" > Details</a>\n        </div>\n\n    </div> ";
+    cardsContainer.innerHTML += "\n        <div class=\" col-sm-12 col-md-3 mb-4\">\n        <div class=\" card h-100 \">\n            <img class=\"card-img-top \" src=\"" + img + "\" alt=\"Card image cap\">\n            <div class=\"card-body\" >\n                <h3 class=\"card-title\">" + rocket.name + "</h3>\n                <p class=\"card-text width=\"\" \">" + rocket.description + "</p>\n                </div>\n                <a class=\" btn btn-primary\" href=\"detail.html?id=" + rocket.id + "\" > Details</a>\n        </div>\n\n    </div> ";
   });
 }
 
 exports.default = createRocketCards;
+},{}],"js/createCompanyList.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function createCompanyList(information) {
+  var lisContainer = document.querySelector(".list"); ///  console.log("information", information);
+
+  lisContainer.innerHTML += "\n\n\n    <div class=\"accordion \" id=\"accordionExample\">\n    <div class=\"card\">\n        <div class=\"card-header\" id=\"headingOne\">\n                <a class=\"btn\" data-toggle=\"collapse\" data-target=\"#collapseOne\" aria-expanded=\"false\"\n                    aria-controls=\"collapseOne\"><h5>Headquarter</h5></a>\n        </div>\n        <div id=\"collapseOne\" class=\"collapse   \" aria-labelledby=\"headingOne\" data-parent=\"#accordionExample\">\n                 \n               <p class=\"\"><span>City:</span>" + information.headquarters.city + "</p>\n                 <p><span> State:</span>" + information.headquarters.state + "</p>\n                 <p><span>Address:</span>" + information.headquarters.address + "</p>\n        </div>\n    </div>\n    <div class=\"card\">\n        <div class=\"card-header\" id=\"headingTwo\">\n            <a class=\"btn  collapsed\" data-toggle=\"collapse\" data-target=\"#collapseTwo\"\n                    aria-expanded=\"false\" aria-controls=\"collapseTwo\"><h5>Management</h5></a>\n        </div>\n        <div id=\"collapseTwo\" class=\"collapse  show \" aria-labelledby=\"headingTwo\" data-parent=\"#accordionExample\">        \n                        <p><span>CEO:</span>" + information.ceo + "</p>\n                        <p><span>CTO:</span>" + information.cto_propulsion + "</p>\n                        <p><span>Employees:</span>" + information.employees + "</p>\n        </div>\n    </div>\n    <div class=\"card\">\n        <div class=\"card-header\" id=\"headingThree\">\n                <a class=\"btn  collapsed\" data-toggle=\"collapse\" data-target=\"#collapseThree\"\n                    aria-expanded=\"false\" aria-controls=\"collapseThree\"><h5>Founded</h5></a>\n        </div>\n        <div id=\"collapseThree\" class=\"collapse \" aria-labelledby=\"headingThree\" data-parent=\"#accordionExample\">\n        <p><span>Summary:</span>" + information.summary + "</p>\n        <p><span>Founded:</span>" + information.founded + "</p>\n        </div>\n    </div>\n    \n</div>  ";
+}
+
+exports.default = createCompanyList;
+},{}],"js/displayLanuches.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function displayLanuches(launches) {
+  var upcomingLaunchesContainer = document.querySelector(".upcominlaunh");
+  var html = "";
+
+  for (var i = 7; i < launches.length; i++) {
+    var launchDate = new Date(launches[i].date_local);
+    var year = launchDate.getFullYear();
+    var date = launchDate.getDate();
+    var month = launchDate.getMonth() + 1;
+    var today = new Date();
+    var hours = today.getHours();
+    var min = today.getMinutes();
+    html += "\n            <div class=\"col-6 col-lg-3 col-md-6\">\n                <div class=\"event_details\">\n                    <div class=\"d-flex mb-4\">\n                    <div class=\"date\"><span>" + year + "</span>" + month + "-" + date + " </div>\n                    <div class=\"time-location\">\n                    <p><span class=\"ti-time mr-2\"></span> " + hours + ":" + min + " AM</p>\n                     <p><span class=\"ti-location-pin mr-2\"></span> " + launches[i].name + "</p>\n                    </div>\n                    </div>\n                    <div class=\"row\">\n                    <div class=\"col-sm eventtext\">\n                    Flight nr:\n                    " + launches[i].flight_number + "\n                  </div>\n                  <div class=\"col-sm eventtext\">\n                  </div>\n                  </div>\n                </div>\n                </div>\n    ";
+  }
+
+  upcomingLaunchesContainer.innerHTML = html;
+}
+
+exports.default = displayLanuches;
 },{}],"js/script.ts":[function(require,module,exports) {
 "use strict";
 
@@ -18592,22 +18609,29 @@ var __importDefault = this && this.__importDefault || function (mod) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ROCKETS_URL = void 0;
+exports.ROCKETS_URL = void 0; // Import our scss file
 
-require("../sass/style.scss"); // Import our scss file
+require("../sass/style.scss"); // Import our bootstrao
 
 
 require("bootstrap");
 
-require("@fortawesome/fontawesome-free/css/all.css");
+require("@fortawesome/fontawesome-free/css/all.css"); // Importing function
 
-var displayNextLaunch_1 = __importDefault(require("./cardcontainer/displayNextLaunch"));
 
-var createRocketCards_1 = __importDefault(require("./cardcontainer/createRocketCards"));
+var displayNextLaunch_1 = __importDefault(require("./displayNextLaunch"));
 
-console.log("hello");
+var createRocketCards_1 = __importDefault(require("./createRocketCards"));
+
+var createCompanyList_1 = __importDefault(require("./createCompanyList"));
+
+var displayLanuches_1 = __importDefault(require("./displayLanuches")); // values with the api 
+
+
 var NEXT_LAUNCH = "https://api.spacexdata.com/v4/launches/next";
 exports.ROCKETS_URL = "https://api.spacexdata.com/v4/rockets";
+var ABOUT_URL = "https://api.spacexdata.com/v4/company"; // async functions that are grabbing data we can use
+// get data for displaynextlauch
 
 function getNextLaunch() {
   return __awaiter(this, void 0, void 0, function () {
@@ -18651,7 +18675,7 @@ function getNextLaunch() {
   });
 }
 
-getNextLaunch();
+getNextLaunch(); // get data for the rocket array
 
 function getRockets() {
   return __awaiter(this, void 0, void 0, function () {
@@ -18696,8 +18720,90 @@ function getRockets() {
   });
 }
 
-getRockets();
-},{"../sass/style.scss":"sass/style.scss","bootstrap":"../node_modules/bootstrap/dist/js/bootstrap.js","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./cardcontainer/displayNextLaunch":"js/cardcontainer/displayNextLaunch.ts","./cardcontainer/createRocketCards":"js/cardcontainer/createRocketCards.ts"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+getRockets(); // getting data to the accordion
+
+function getCompanyInformation() {
+  return __awaiter(this, void 0, void 0, function () {
+    var response, json, data, error_3;
+    return __generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          _a.trys.push([0, 3,, 4]);
+
+          return [4
+          /*yield*/
+          , fetch(ABOUT_URL)];
+
+        case 1:
+          response = _a.sent();
+          return [4
+          /*yield*/
+          , response.json()];
+
+        case 2:
+          json = _a.sent();
+          data = json;
+          createCompanyList_1.default(data);
+          return [3
+          /*break*/
+          , 4];
+
+        case 3:
+          error_3 = _a.sent();
+          console.log(error_3);
+          return [3
+          /*break*/
+          , 4];
+
+        case 4:
+          return [2
+          /*return*/
+          ];
+      }
+    });
+  });
+}
+
+getCompanyInformation();
+var UPCOMING_LAUNCH_URL = "https://api.spacexdata.com/v4/launches/upcoming";
+var launchesArray;
+fetch(UPCOMING_LAUNCH_URL).then(function (response) {
+  return response.json();
+}).then(function (data) {
+  launchesArray = data;
+  displayLanuches_1.default(launchesArray);
+}).catch(function (error) {
+  return console.log(error);
+});
+var PREVIOUS_LAUNCH_URL = "https://api.spacexdata.com/v4/launches/past";
+var previousLaunchesArray;
+fetch(PREVIOUS_LAUNCH_URL).then(function (response) {
+  return response.json();
+}).then(function (data) {
+  previousLaunchesArray = data;
+  displayPreviousLanuches(previousLaunchesArray);
+}).catch(function (error) {
+  return console.log(error);
+});
+
+function displayPreviousLanuches(previous) {
+  var previousLaunchesContainer = document.querySelector(".previouslaunh");
+  var html = "";
+
+  for (var i = 113; i < previous.length; i++) {
+    var launchDate = new Date(previous[i].date_local);
+    var year = launchDate.getFullYear();
+    var date = launchDate.getDate();
+    var month = launchDate.getMonth() + 1;
+    var today = new Date();
+    var hours = today.getHours();
+    var min = today.getMinutes();
+    html += "\n            <div class=\"col-12 col-lg-6 col-md-6 \">\n            <div class=\"event_details\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"date\">\n                        <span>" + year + "</span>" + month + "-" + date + "\n                    </div>\n                    <div class=\"time-location\">\n                        <p>" + hours + ":" + min + " AM</p>\n                        <p>" + previous[i].name + "</p>\n                    </div>\n                </div>\n                <div  class=\"row\">\n                <div id=\"module\" class=\"\">\n                <p class=\"collapse\" id=\"collapseExample\" aria-expanded=\"false\">\n                " + previous[i].details + "\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\"\n                    aria-controls=\"collapseExample\"></a>\n            </div>\n             \n                </div>\n            </div>\n        </div>\n    ";
+  }
+
+  previousLaunchesContainer.innerHTML = html;
+}
+},{"../sass/style.scss":"sass/style.scss","bootstrap":"../node_modules/bootstrap/dist/js/bootstrap.js","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./displayNextLaunch":"js/displayNextLaunch.ts","./createRocketCards":"js/createRocketCards.ts","./createCompanyList":"js/createCompanyList.ts","./displayLanuches":"js/displayLanuches.ts"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -18725,7 +18831,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63564" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65105" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

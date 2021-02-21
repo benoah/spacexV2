@@ -1,5 +1,5 @@
 
-export default function displayNextLaunch(data) {
+export default function displayNextLaunch(data:any) {
   const nextLaunchContainer = document.querySelector(".next-launch");
   let launchDate = new Date(data.date_local);
   let year = launchDate.getFullYear();
@@ -59,26 +59,3 @@ export default function displayNextLaunch(data) {
   }, 1000);
 
 }
-/*
-  <article class="jumbotron">
-           <div id="special" class="col">
-          <header class="jumbotronHeader">
-            <small class="jumbotronCategory " id="jumbotronCategory">
-            ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
-            </small>
-
-            
-            <h1 class="jumbotronTitle " id="jumbotronTitle">
-            ${new Intl.DateTimeFormat("en-US", options).format(month)}<span>${year}</span></h1>
-            <h2 class"jumbotronName">${data.name}</h2>
-            <p class="flight-nr">Flight-nr: ${data.flight_number}</p>
-            <footer class="jumbotronFooter" id="jumbotronFooter">
-            <a class="btn btn-primary" href="#" role="button">Start at ${hours}pm</a>
-          </footer>
-          </header>
-        </div>
-  
-  </div>
-</article>
-
-*/
