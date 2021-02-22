@@ -1,3 +1,102 @@
+
+.next-launch{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotronCategory {
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.3;
+  color: #f1f1f1;
+  margin-bottom: 32px;
+}
+.jumbotronCategory::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 1px;
+  background-color: #fc0;
+}
+
+.jumbotronHeaderone {
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  text-transform: uppercase;
+  color: #fc0;
+  letter-spacing: 0.4em;
+
+  margin-bottom: 32px;
+}
+
+.year{
+  padding-left: 16px;
+}
+
+.jumbotronHeadertwo {
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  letter-spacing: 0.4em;
+  margin-bottom: 16px;
+}
+
+.Flight-nr{
+  color: #f1f1f1;
+  letter-spacing: 0.4em;
+  margin-bottom: 64px;
+}
+
+.btn {
+  position: relative;
+  padding: 0 15px;
+  border-width: 2px;
+  height: 40px;
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  font-size: 16px;
+  line-height: 38px;
+  border-radius: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited {
+  border-color: #fc0;
+  background-color: transparent;
+  color: #fc0;
+
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: rgba(222, 102, 0, 0.1);
+  color: #f1f1f1;
+}
+
+@media screen and (min-width: 812px){
+
+  .jumbotronHeaderone {
+    font-size: 32px;
+  }
+  .jumbotronHeadertwo {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+  
+
+}
+
+
+/*
 .next-launch{
   margin-top: 80px;
   display: flex;
@@ -5,7 +104,7 @@
 }
 
 .Flight-nr{
-  color: #f1f1f1;
+  color: green;
   margin-bottom: 32px;
 }
 
@@ -17,7 +116,6 @@
   line-height: 1.3;
   color: #f1f1f1;
   margin-bottom: 32px;
-
 }
 .jumbotronCategory::before {
   content: "";
@@ -101,3 +199,7 @@
 
 
 }
+
+
+
+*/

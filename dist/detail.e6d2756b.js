@@ -18794,11 +18794,11 @@ function displayPreviousLanuches(previous) {
     var launchDate = new Date(previous[i].date_local);
     var year = launchDate.getFullYear();
     var date = launchDate.getDate();
-    var month = launchDate.getMonth() + 1;
     var today = new Date();
     var hours = today.getHours();
     var min = today.getMinutes();
-    html += "\n            <div class=\"col-12 col-lg-6 col-md-6 \">\n            <div class=\"event_details\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"date\">\n                        <span>" + year + "</span>" + month + "-" + date + "\n                    </div>\n                    <div class=\"time-location\">\n                        <p>" + hours + ":" + min + " AM</p>\n                        <p>" + previous[i].name + "</p>\n                    </div>\n                </div>\n                <div  class=\"row\">\n                <div id=\"module\" class=\"\">\n                <p class=\"collapse\" id=\"collapseExample\" aria-expanded=\"false\">\n                " + previous[i].details + "\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\"\n                    aria-controls=\"collapseExample\"></a>\n            </div>\n             \n                </div>\n            </div>\n        </div>\n    ";
+    var month = launchDate.getMonth() + 1;
+    html += "\n            <div class=\"col-12 col-lg-6 col-md-6 \">\n            <div class=\"event_details\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"date\">\n                    <span>" + year + "</span>0" + month + "-" + date + "\n                    </div>\n                    <div class=\"time-location\">\n                        <p>" + hours + ":" + min + " AM</p>\n                        <p>" + previous[i].name + "</p>\n                    </div>\n                </div>\n                <div  class=\"row\">\n                <div id=\"module\" class=\"\">\n                <p class=\"collapse\" id=\"collapseExample\" aria-expanded=\"false\">\n                " + previous[i].details + "\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\"\n                    aria-controls=\"collapseExample\"></a>\n            </div>\n             \n                </div>\n            </div>\n        </div>\n    ";
   }
 
   previousLaunchesContainer.innerHTML = html;
@@ -18974,7 +18974,7 @@ var detailsUrl = script_1.ROCKETS_URL + "/" + id;
 
 (function () {
   return __awaiter(this, void 0, void 0, function () {
-    var response, details, container, img, imgone, error_1;
+    var response, details, container, img, error_1;
     return __generator(this, function (_a) {
       switch (_a.label) {
         case 0:
@@ -18995,18 +18995,13 @@ var detailsUrl = script_1.ROCKETS_URL + "/" + id;
           document.title = details.name;
           console.log("details", details.flickr_images[0]);
           container = document.querySelector(".detail-container");
-          img = details.flickr_images[0];
-          imgone = details.flickr_images[1];
+          img = details.flickr_images[1];
 
           if (img.includes("imgur")) {
-            img = "img/spacex-6.png";
+            img = "https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80";
           }
 
-          if (imgone.includes("imgur")) {
-            imgone = "img/spacex-uOHYUeIT31o-unsplash.jpg";
-          }
-
-          container.innerHTML = "\n        <div class=\"container detail\">\n        <div class=\"row\">\n        <div class=\"col-md-6\">\n        <div class=\"col-md-12\">\n          <div class=\"project-info-box mt-0\">\n          <h5>" + details.name + "</h5>\n          <p class=\"mb-0\">" + details.description + "</p>\n      </div>\n        <div class=\"project-info-box\">\n         <p><b>Type:</b> " + details.type + "</p>\n        <p><b>First flight:</b> " + details.first_flight + "</p>\n         <p><b>Country:</b> " + details.country + "</p>\n        <p><b>Material:</b> " + details.landing_legs.material + "</p>\n        <p class=\"mb-0\"><b>Cost per Launch:</b> $" + details.cost_per_launch + " </p>\n     </div>\n     </div>\n    </div>\n    <div class=\"col-md-6\">\n    <div class=\"col-md-12\">\n    <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">\n  <div class=\"carousel-inner\">\n    <div class=\"carousel-item active\">\n      <img class=\"d-block w-100\" src=\"" + img + "\" alt=\"First slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"" + imgone + "\" alt=\"Second slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"" + details.flickr_images[3] + "\" alt=\"Third slide\">\n    </div>\n  </div>\n  <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\n    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n </a>\n<a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\n   <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n </a>\n</div>  \n<div class =\"image-row row \"> \n<img class=\"detailimage\" src=\"" + details.flickr_images[0] + "\" alt=\"\">  \n<img class=\"detailimage\" src=\"" + details.flickr_images[1] + "\" alt=\"\">\n<img class=\"detailimage\" src=\"" + details.flickr_images[2] + "\" alt=\"\">\n<img class=\"detailimage\" src=\"" + details.flickr_images[3] + "\" alt=\"\">\n            </div>           \n        </div> \n    </div>        \n</div>\n    </div>\n        </div>    \n          </div>";
+          container.innerHTML = "\n        <div class=\" detail\">\n        <div class=\"row\">\n        <div class=\"col-md-6\">\n        <div class=\"col-md-12\">\n          <div class=\"project-info-box mt-0\">\n          <h4 id=\"Upcomming\" class=\" cardTitle \">\n          " + details.name + "</h4>\n          <div class=\"project-info-box-text\">\n          <p>" + details.description + "</p>\n          </div>\n      </div>\n        <div class=\"project-info-box-content\">\n         <p><b>Type:</b> " + details.type + "</p>\n        <p><b>First flight:</b> " + details.first_flight + "</p>\n         <p><b>Country:</b> " + details.country + "</p>\n        <p><b>Material:</b> " + details.landing_legs.material + "</p>\n        <p class=\"mb-0\"><b>Cost per Launch:</b> $" + details.cost_per_launch + " </p>\n     </div>\n     </div>\n    </div>\n    <div class=\"col-md-6\">\n    <div class=\"col-md-12\">\n    <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">\n  <div class=\"carousel-inner\">\n    <div class=\"carousel-item active\">\n      <img class=\"d-block w-100\" src=\"" + details.flickr_images[1] + "\" alt=\"First slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"" + details.flickr_images[2] + "\" alt=\"Second slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"" + details.flickr_images[3] + "\" alt=\"Third slide\">\n    </div>\n  </div>\n  <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\n    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n </a>\n<a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\n   <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n </a>\n</div>  \n<div class =\"image-row row \"> \n<img class=\"detailimage\" src=\"" + details.flickr_images[1] + "\" alt=\"\">  \n<img class=\"detailimage\" src=\"" + details.flickr_images[2] + "\" alt=\"\">\n<img class=\"detailimage\" src=\"" + details.flickr_images[3] + "\" alt=\"\">\n<img class=\"detailimage\" src=\"" + details.flickr_images[4] + "\" alt=\"\">\n            </div>           \n        </div> \n    </div>        \n</div>\n    </div>\n        </div>    \n          </div>";
           return [3
           /*break*/
           , 4];
@@ -19054,7 +19049,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51764" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54024" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -18794,11 +18794,11 @@ function displayPreviousLanuches(previous) {
     var launchDate = new Date(previous[i].date_local);
     var year = launchDate.getFullYear();
     var date = launchDate.getDate();
-    var month = launchDate.getMonth() + 1;
     var today = new Date();
     var hours = today.getHours();
     var min = today.getMinutes();
-    html += "\n            <div class=\"col-12 col-lg-6 col-md-6 \">\n            <div class=\"event_details\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"date\">\n                        <span>" + year + "</span>" + month + "-" + date + "\n                    </div>\n                    <div class=\"time-location\">\n                        <p>" + hours + ":" + min + " AM</p>\n                        <p>" + previous[i].name + "</p>\n                    </div>\n                </div>\n                <div  class=\"row\">\n                <div id=\"module\" class=\"\">\n                <p class=\"collapse\" id=\"collapseExample\" aria-expanded=\"false\">\n                " + previous[i].details + "\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\"\n                    aria-controls=\"collapseExample\"></a>\n            </div>\n             \n                </div>\n            </div>\n        </div>\n    ";
+    var month = launchDate.getMonth() + 1;
+    html += "\n            <div class=\"col-12 col-lg-6 col-md-6 \">\n            <div class=\"event_details\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"date\">\n                    <span>" + year + "</span>0" + month + "-" + date + "\n                    </div>\n                    <div class=\"time-location\">\n                        <p>" + hours + ":" + min + " AM</p>\n                        <p>" + previous[i].name + "</p>\n                    </div>\n                </div>\n                <div  class=\"row\">\n                <div id=\"module\" class=\"\">\n                <p class=\"collapse\" id=\"collapseExample\" aria-expanded=\"false\">\n                " + previous[i].details + "\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\"\n                    aria-controls=\"collapseExample\"></a>\n            </div>\n             \n                </div>\n            </div>\n        </div>\n    ";
   }
 
   previousLaunchesContainer.innerHTML = html;
@@ -18831,7 +18831,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51764" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54024" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

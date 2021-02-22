@@ -104,15 +104,16 @@ fetch(UPCOMING_LAUNCH_URL)
             let launchDate = new Date(previous[i].date_local);
             let year = launchDate.getFullYear();
             let date = launchDate.getDate();
-            let month = launchDate.getMonth() + 1;
+            
             let today = new Date();
             let hours = today.getHours();
             let min = today.getMinutes();
     
          
     
+            let month = launchDate.getMonth() + 1;
     
-    
+            
     
     
             html += `
@@ -120,7 +121,7 @@ fetch(UPCOMING_LAUNCH_URL)
             <div class="event_details">
                 <div class="d-flex mb-4">
                     <div class="date">
-                        <span>${year}</span>${month}-${date}
+                    <span>${year}</span>0${month}-${date}
                     </div>
                     <div class="time-location">
                         <p>${hours}:${min} AM</p>
@@ -141,13 +142,9 @@ fetch(UPCOMING_LAUNCH_URL)
         </div>
     `;
         }
-        previousLaunchesContainer.innerHTML = html;
-    
-    
-    
-    
-    
-    
-    
-    
+        previousLaunchesContainer.innerHTML = html;    
     }
+
+
+
+    

@@ -30,25 +30,23 @@ const detailsUrl = ROCKETS_URL + "/" + id;
 
         const container = document.querySelector(".detail-container");
 
-        let img = details.flickr_images[0];
-        let imgone = details.flickr_images[1];
-
+        let img = details.flickr_images[1];
         if (img.includes("imgur")) {
-            img = "img/spacex-6.png"
-        }
-        if (imgone.includes("imgur")) {
-            imgone = "img/spacex-uOHYUeIT31o-unsplash.jpg"
+            img = "https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80";
         }
         container.innerHTML = `
-        <div class="container detail">
+        <div class=" detail">
         <div class="row">
         <div class="col-md-6">
         <div class="col-md-12">
           <div class="project-info-box mt-0">
-          <h5>${details.name}</h5>
-          <p class="mb-0">${details.description}</p>
+          <h4 id="Upcomming" class=" cardTitle ">
+          ${details.name}</h4>
+          <div class="project-info-box-text">
+          <p>${details.description}</p>
+          </div>
       </div>
-        <div class="project-info-box">
+        <div class="project-info-box-content">
          <p><b>Type:</b> ${details.type}</p>
         <p><b>First flight:</b> ${details.first_flight}</p>
          <p><b>Country:</b> ${details.country}</p>
@@ -62,10 +60,10 @@ const detailsUrl = ROCKETS_URL + "/" + id;
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="${img}" alt="First slide">
+      <img class="d-block w-100" src="${details.flickr_images[1]}" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="${imgone}" alt="Second slide">
+      <img class="d-block w-100" src="${details.flickr_images[2]}" alt="Second slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="${details.flickr_images[3]}" alt="Third slide">
@@ -79,10 +77,10 @@ const detailsUrl = ROCKETS_URL + "/" + id;
  </a>
 </div>  
 <div class ="image-row row "> 
-<img class="detailimage" src="${details.flickr_images[0]}" alt="">  
-<img class="detailimage" src="${details.flickr_images[1]}" alt="">
+<img class="detailimage" src="${details.flickr_images[1]}" alt="">  
 <img class="detailimage" src="${details.flickr_images[2]}" alt="">
 <img class="detailimage" src="${details.flickr_images[3]}" alt="">
+<img class="detailimage" src="${details.flickr_images[4]}" alt="">
             </div>           
         </div> 
     </div>        

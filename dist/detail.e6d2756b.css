@@ -5,7 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;500;600;700;800&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9930,22 +9930,31 @@ h3 {
   }
 }
 .navbar-brand {
-  font-family: "karla", sans-serif;
   text-transform: uppercase;
   color: #de6600;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.6rem;
   text-decoration: none;
   transition: all 3s ease-in-out;
-  font-weight: 700;
+  font-weight: 200;
+}
+
+.navbar-brand:hover {
+  color: #fc0;
+}
+
+.nav-item a {
+  color: #fc0;
+  font-size: 14px;
+}
+
+.nav-item a:hover {
+  border-bottom: 1px solid #de6600;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 812px) {
-  header .hamburger {
-    margin-top: 4px;
-  }
-
   header .hamburger span {
-    height: 2px;
+    height: 1px;
     background: #fc0;
     display: block;
     border: none;
@@ -9974,34 +9983,15 @@ h3 {
     height: 100vh;
   }
 
-  .navbar-toggler:focus {
-    text-decoration: none;
-    outline: 0;
-    box-shadow: rgba(0, 35, 71, 0.5);
-  }
-
-  .nav-item {
-    padding: 40px;
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
   }
 
   .nav-item a {
-    color: #fc0;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 812px) {
-  .navbar-brand span {
-    color: #fc0;
-    mix-blend-mode: color-dodge;
-  }
-
-  .nav-item .nav-link {
-    text-decoration: none;
-    color: #fc0;
-    padding-bottom: 0.313rem;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin-top: 16px;
+    margin-bottom: 24px;
   }
 }
 .next-launch {
@@ -10010,13 +10000,7 @@ h3 {
   flex-direction: column;
 }
 
-.Flight-nr {
-  color: #f1f1f1;
-  margin-bottom: 32px;
-}
-
 .jumbotronCategory {
-  display: block;
   position: relative;
   padding-left: 24px;
   line-height: 1.3;
@@ -10031,8 +10015,108 @@ h3 {
   left: 0;
   top: 6px;
   width: 16px;
+  height: 1px;
+  background-color: #fc0;
+}
+
+.jumbotronHeaderone {
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  text-transform: uppercase;
+  color: #fc0;
+  letter-spacing: 0.4em;
+  margin-bottom: 32px;
+}
+
+.year {
+  padding-left: 16px;
+}
+
+.jumbotronHeadertwo {
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  letter-spacing: 0.4em;
+  margin-bottom: 16px;
+}
+
+.Flight-nr {
+  color: #f1f1f1;
+  letter-spacing: 0.4em;
+  margin-bottom: 64px;
+}
+
+.btn {
+  position: relative;
+  padding: 0 15px;
+  border-width: 2px;
+  height: 40px;
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  font-size: 16px;
+  line-height: 38px;
+  border-radius: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited {
+  border-color: #fc0;
+  background-color: transparent;
+  color: #fc0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: rgba(222, 102, 0, 0.1);
+  color: #f1f1f1;
+}
+
+@media screen and (min-width: 812px) {
+  .jumbotronHeaderone {
+    font-size: 32px;
+  }
+
+  .jumbotronHeadertwo {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+}
+/*
+.next-launch{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Flight-nr{
+  color: green;
+  margin-bottom: 32px;
+}
+
+
+.jumbotronCategory {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.3;
+  color: #f1f1f1;
+  margin-bottom: 32px;
+}
+.jumbotronCategory::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
   height: 2px;
   background-color: #fc0;
+
 }
 
 .jumbotronHeaderone {
@@ -10043,20 +10127,21 @@ h3 {
   letter-spacing: 0.4em;
   mix-blend-mode: color-dodge;
   margin-bottom: 24px;
-}
 
-.year {
+}
+.year{
   margin-left: 16px;
 }
-
 .jumbotronHeadertwo {
   font-weight: 700;
   font-family: "Ek Mukta", sans-serif;
   text-transform: uppercase;
   color: #f1f1f1;
   letter-spacing: 0.4em;
-  margin-bottom: 48px;
+  margin-bottom:48px;
 }
+
+
 
 .btn {
   position: relative;
@@ -10088,37 +10173,43 @@ h3 {
   color: #f1f1f1;
 }
 
+
 @media screen and (min-width: 812px) {
   .jumbotronHeaderone {
+
     font-size: 56px;
   }
 
   .jumbotronHeadertwo {
     font-size: 32px;
+
   }
+
+
+
+
 }
+
+
+
+*/
 .timerlaunch {
   color: #fc0;
   background: rgba(0, 35, 71, 0.5);
+  margin-top: 80px;
+}
+
+.timerlaunch-counter {
   padding: 16px;
-  margin-top: 64px;
 }
 
-.timerlaunchCategory {
-  display: block;
-  position: relative;
-  margin-bottom: 24px;
-}
-
-.timerlaunch span {
-  margin-left: 8px;
+.timerlaunch-counter span {
+  padding-left: 8px;
 }
 
 .timerlaunch p {
-  color: #f1f1f1;
-  font-size: 14px;
+  color: #de6600;
   text-transform: uppercase;
-  font-weight: 500;
 }
 
 .timerlaunchCategory {
@@ -10126,24 +10217,46 @@ h3 {
   position: relative;
   font-size: 16px;
   line-height: 1.3;
-  color: #fc0;
+  color: #f1f1f1;
   margin-bottom: 16px;
 }
 
+.timerlaunchCategory {
+  position: relative;
+  color: #fc0;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+.timerlaunchCategory::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 96px;
+  height: 1px;
+  background-color: #fc0;
+}
+
+@media screen and (min-width: 812px) {
+  .timerlaunch {
+    margin-top: 32px;
+  }
+}
 .cardscontainer {
   margin-top: 80px;
 }
 
 .cardTitle {
   position: relative;
-  font-weight: 700;
   font-family: "Ek Mukta", sans-serif;
   text-transform: uppercase;
   color: #fc0;
-  mix-blend-mode: color-dodge;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.4rem;
   margin-bottom: 24px;
   padding-left: 24px;
+  margin-bottom: 32px;
 }
 
 .cardTitle::before {
@@ -10151,12 +10264,11 @@ h3 {
   display: block;
   position: absolute;
   left: 0px;
-  top: 16px;
+  top: 12px;
   width: 16px;
   height: 2px;
   background-color: #fc0;
   display: block;
-  mix-blend-mode: color-dodge;
 }
 
 .card {
@@ -10168,33 +10280,11 @@ h3 {
   background: rgba(0, 35, 71, 0.5);
 }
 
-@media screen and (min-width: 812px) {
-  .card-text {
-    line-height: 1.1;
-    margin-top: 0.1em;
-    width: 100%;
-  }
-}
-/*
-
-
-.card img {
-  object-fit: cover;
-  background: rgba(0, 35, 71, 0.5);
+.card .btn {
+  width: 50%;
+  margin: auto;
 }
 
-
-.card-body h3 {
-  color: #fc0;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.card-text {
-  color: #f1f1f1;
-  line-height: 1.3;
-}
-*/
 .contactcontainer {
   margin-top: 80px;
 }
@@ -10288,27 +10378,49 @@ h3 {
   color: #fc0;
   font-weight: 700;
   letter-spacing: 0.4em;
-  font-size: 14px;
+  font-size: 16px;
+  text-align: left;
 }
+
+.accordion p {
+  text-align: left;
+  padding-left: 40px;
+}
+
+.collapse {
+  padding: 16px;
+}
+
+.accordion span {
+  color: #de6600;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/*
+
+
 
 .accordion span {
   color: #de6600;
   font-weight: 700;
   letter-spacing: 0.2em;
 }
-
 .accordion p {
   color: #f1f1f1;
   font-weight: 200;
   padding-left: 32px;
 }
-
 .accordion p span {
   margin-right: 8px;
 }
-
+*/
 .upcominlaunhContainer {
   margin-top: 80px;
+}
+
+#Upcomming {
+  mix-blend-mode: color-dodge;
 }
 
 .event_details {
@@ -10329,22 +10441,19 @@ h3 {
 .event_details .date span {
   display: block;
   color: #fdc632;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
 }
 
 .event_details .time-location {
   padding-left: 16px;
   font-size: 14px;
+  color: #de6600;
 }
 
 .eventtext {
   margin-top: 16px;
   font-size: 14px;
-}
-
-.upcominlaunh {
-  color: #f1f1f1;
 }
 
 a {
@@ -10384,52 +10493,105 @@ a {
   justify-content: center;
 }
 
-.footer {
-  padding: 2.5rem 0;
-  position: relative;
-  z-index: 2;
-}
+/*
 
-.footer section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
 
-.footer section p {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 0.75rem;
-  color: #a7a9ac;
-}
 
-.footer section span {
-  width: 2.5rem;
-  height: 0.25rem;
-  background: #a7a9ac;
-  margin: 0.313rem 0 0.313rem;
-  display: block;
-  margin: 1rem 0;
-}
 
+
+
+
+
+
+  .upcominlaunh {
+    color: #f1f1f1;
+  }
+  a {
+    color: #0d6efd;
+    text-decoration: yellow;
+  }
+  #module {
+    font-size: 14px;
+    line-height: 1.3;
+
+    padding: 8px;
+    max-width: 75ch;
+
+  }
+
+  #module #collapseExample.collapse:not(.show) {
+    display: block;
+    height: 32px;
+    overflow: hidden;
+    line-height: 1.3;
+
+  }
+
+  #module #collapseExample.collapsing {
+    height: 3rem;
+  }
+
+  #module a.collapsed::after {
+    content: "Read More";
+    color: #de6600;
+    display: flex;
+    justify-content: center;
+  }
+
+  #module a:not(.collapsed)::after {
+    content: "Show Less";
+    color: #de6600;
+    display: flex;
+    justify-content: center;
+  }
+  .footer {
+    padding: 2.5rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer section p {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.75rem;
+    color: #a7a9ac;
+  }
+
+  .footer section span {
+    width: 2.5rem;
+    height: 0.25rem;
+    background: #a7a9ac;
+    margin: 0.313rem 0 0.313rem;
+    display: block;
+    margin: 1rem 0;
+  }
+
+*/
 .previouslaunhContainer {
   margin-top: 80px;
 }
 
+#Previous {
+  mix-blend-mode: color-dodge;
+}
+
 .footer {
   margin-top: 80px;
-  padding: 2.5rem 0;
-  position: relative;
-  z-index: 2;
-  background: rgba(222, 102, 0, 0.5);
+  background: rgba(222, 102, 0, 0.1);
 }
 
 .footer section {
@@ -10452,83 +10614,55 @@ a {
   color: #f1f1f1;
 }
 
-.footer section span {
-  width: 2.5rem;
-  height: 0.25rem;
-  background: #a7a9ac;
-  margin: 0.313rem 0 0.313rem;
-  display: block;
-  margin: 1rem 0;
-}
-
 .detail-container {
   margin-top: 80px;
 }
 
-.detail-container p {
+.project-info-box-text {
   color: #f1f1f1;
   letter-spacing: 0.03rem;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-.detail-container b,
-strong {
-  font-weight: 700;
-  color: #de6600;
-  text-align: justify;
-  text-transform: uppercase;
+.project-info-box-content {
+  color: #f1f1f1;
+  margin-bottom: 16px;
 }
 
-.project-info-box {
-  margin-top: 16px;
-}
-
-.detail-container h5 {
-  font-size: 32px;
-  text-transform: uppercase;
-  color: #fc0;
+.detail-container b {
+  color: #fdc632;
+  font-weight: 400;
 }
 
 .carousel-inner img {
-  width: 200px;
-  height: 300px;
+  margin-top: 16px;
+  max-height: 200px;
   object-fit: cover;
 }
 
 .detailimage {
-  width: 128px;
+  width: 80px;
   object-fit: cover;
-  margin-top: 16px;
-}
-
-.carousel-inner {
-  margin-top: 32px;
-}
-
-.cardTitleContact {
-  position: relative;
-  font-weight: 500;
-  font-family: "Ek Mukta", sans-serif;
-  text-transform: uppercase;
-  color: #fc0;
-  mix-blend-mode: color-dodge;
-  letter-spacing: 0.2em;
-  margin-bottom: 24px;
-}
-
-.cardTitleContact::after {
-  content: "";
   display: block;
-  position: absolute;
-  left: 240px;
-  top: 16px;
-  width: 16px;
-  height: 2px;
-  background-color: #fc0;
-  display: block;
-  mix-blend-mode: color-dodge;
+  margin: auto;
+  padding-top: 16px;
 }
 
+@media screen and (min-width: 812px) {
+  .carousel-inner img {
+    margin-top: 64px;
+    max-height: 280px;
+    object-fit: cover;
+  }
+
+  .detailimage {
+    width: 106px;
+    object-fit: cover;
+    display: block;
+    padding-top: 16px;
+  }
+}
 .wrapper {
   background-image: url(/altinay-dinc-LluELtL5mK4-unsplash.379e5d75.jpg);
   font-family: "Ek Mukta", sans-serif;
@@ -10538,12 +10672,6 @@ strong {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/*  src/img/altinay-dinc-LluELtL5mK4-unsplash.jpg
-
-  src/img/altinay-dinc-LluELtL5mK4-unsplash.jpg
-
-  /Users/kristine/Desktop/spacexV2/src/img/altinay-dinc-LluELtL5mK4-unsplash.jpg*/
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

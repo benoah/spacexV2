@@ -1,40 +1,56 @@
+
 .timerlaunch {
-    color: #fc0;
-    background: rgba(0, 35, 71, 0.5);
-    padding: 16px;
-    
-    margin-top: 64px;
-  }
-
-  .timerlaunchCategory{
-    display: block;
-    position: relative;
-    margin-bottom: 24px;
-  }
-
- 
+  color: #fc0;
+  background: rgba(0, 35, 71, 0.5);
+  margin-top: 80px;
+}
+.timerlaunch-counter{
+  padding: 16px;
+}
+.timerlaunch-counter span{
+  padding-left: 8px;
+}
 
 
 
-  .timerlaunch span{
-    margin-left: 8px;
-   
-  }
+
+.timerlaunch p {
+  color:  #de6600;
+  text-transform: uppercase;
   
-  .timerlaunch p {
-    color: #f1f1f1;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 500;
+}
+
+.timerlaunchCategory {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #f1f1f1;
+  margin-bottom: 16px;
+}
+.timerlaunchCategory {
+  position: relative;
+  color: #fc0;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+
+
+.timerlaunchCategory::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 96px;
+  height: 1px;
+  background-color: #fc0;
+}
+@media screen and (min-width: 812px) {
+  .timerlaunch {
+    margin-top: 32px;
   }
-  
-  .timerlaunchCategory {
-    display: block;
-    position: relative;
-    font-size: 16px;
-    line-height: 1.3;
-    color: #fc0;
-    margin-bottom: 16px;
-  }
-  
+}
+
 

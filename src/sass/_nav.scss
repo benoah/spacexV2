@@ -1,76 +1,79 @@
 .navbar-brand {
-  font-family: "karla", sans-serif;
   text-transform: uppercase;
   color: #de6600;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.6rem;
   text-decoration: none;
   transition: all 3s ease-in-out;
-  font-weight: 700;
+  font-weight: 200;
+}
+
+.navbar-brand:hover {
+  color:  #fc0;
+}
+.nav-item a {
+  color: #fc0;
+  font-size: 14px;
+
+}
+
+.nav-item a:hover {
+  border-bottom: 1px solid #de6600;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 812px) {
 
-header .hamburger {
-  margin-top: 4px;
-}
 
-header .hamburger span {
-  height: 2px;
-  background: #fc0;
-  display: block;
-  border: none;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  margin-top: 4px;
-}
+  header .hamburger span {
+    height: 1px;
+    background: #fc0;
+    display: block;
+    border: none;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    margin-top: 4px;
+  }
+  
+  header .hamburger span:nth-child(1) {
+    width: 100%;
+    margin-bottom: 0.313rem;
+  }
+  
+  header .hamburger span:nth-child(2) {
+    width: 80%;
+    margin-bottom: 0.313rem;
+    margin-top: 0.313rem;
+  }
+  header .hamburger span:nth-child(3) {
+    width: 60%;
+    margin-top: 0.313rem;
+  }
+  
 
-header .hamburger span:nth-child(1) {
-  width: 100%;
-  margin-bottom: 0.313rem;
-}
-
-header .hamburger span:nth-child(2) {
-  width: 80%;
-  margin-bottom: 0.313rem;
-  margin-top: 0.313rem;
-}
-header .hamburger span:nth-child(3) {
-  width: 60%;
-  margin-top: 0.313rem;
-}
-
-.navbar-collapse {
-  height: 100vh;
-}
-
-.navbar-toggler:focus {
-  text-decoration: none;
-  outline: 0;
-  box-shadow: rgba(0, 35, 71, 0.5);
-}
-
-.nav-item {
-  padding: 40px;
-}
+  .navbar-collapse {
+    height: 100vh;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+  }
 .nav-item a {
-  color: #fc0;
-  text-align: center;
-}
+  margin-bottom: 24px;
 }
 
 
-@media screen and (min-width: 812px) {
-  .navbar-brand span {
-    color: #fc0;
-    mix-blend-mode: color-dodge;
-  }
-
-  .nav-item .nav-link {
-    text-decoration: none;
-    color: #fc0;
-    padding-bottom: 0.313rem;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin-top: 16px;
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+

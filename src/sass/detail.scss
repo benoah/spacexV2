@@ -1,62 +1,56 @@
 .detail-container {
-    margin-top: 80px;
-  }
+  margin-top: 80px;
+}
+
+.project-info-box-text {
+  color: #f1f1f1;
+  letter-spacing: 0.03rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.project-info-box-content{
+  color: #f1f1f1;
+  margin-bottom: 16px;
+}
+
+
+
+.detail-container b {
+  color: #fdc632;
+  font-weight: 400;
+}
+
+.carousel-inner img {
+  margin-top: 16px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+
+.detailimage {
+  width: 80px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  padding-top: 16px;
+}  
+
+
+@media screen and (min-width: 812px) {
   
-  .detail-container p {
-    color: #f1f1f1;
-    letter-spacing: 0.03rem;
-    font-weight: 500;
-  }
-  
-  .detail-container b,
-  strong {
-    font-weight: 700;
-    color: #de6600;
-    text-align: justify;
-    text-transform: uppercase;
-  }
-  .project-info-box {
-    margin-top: 16px;
-  }
-  
-  .detail-container h5 {
-    font-size: 32px;
-    text-transform: uppercase;
-    color: #fc0;
-  }
   .carousel-inner img {
-    width: 200px;
-    height: 300px;
+    margin-top: 64px;
+    max-height: 280px;
     object-fit: cover;
   }
+
+
   .detailimage {
-    width: 128px;
+    width: 106px;
     object-fit: cover;
-    margin-top: 16px;
-  }
-  .carousel-inner {
-    margin-top: 32px;
-  }
-  .cardTitleContact {
-    position: relative;
-    font-weight: 500;
-    font-family: "Ek Mukta", sans-serif;
-    text-transform: uppercase;
-    color: #fc0;
-    mix-blend-mode: color-dodge;
-    letter-spacing: 0.2em;
-    margin-bottom: 24px;
-  }
-  .cardTitleContact::after {
-    content: "";
     display: block;
-    position: absolute;
-    left: 240px;
-    top: 16px;
-    width: 16px;
-    height: 2px;
-    background-color: #fc0;
-    display: block;
-    mix-blend-mode: color-dodge;
-  }
-  
+    padding-top: 16px;
+  } 
+
+
+}
