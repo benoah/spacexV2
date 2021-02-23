@@ -1,4 +1,4 @@
-
+// Herocard 
 export default function displayNextLaunch(data:any) {
   const nextLaunchContainer = document.querySelector(".next-launch");
   let launchDate = new Date(data.date_local);
@@ -9,7 +9,6 @@ export default function displayNextLaunch(data:any) {
   let hours = today.getHours();
 
 
-  console.log(data);
   
 
   nextLaunchContainer.innerHTML = `  

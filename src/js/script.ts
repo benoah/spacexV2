@@ -102,8 +102,11 @@ fetch(UPCOMING_LAUNCH_URL)
         for (let i = 113; i < previous.length; i++) {
     
             let launchDate = new Date(previous[i].date_local);
+           
             let year = launchDate.getFullYear();
             let date = launchDate.getDate();
+            let month = launchDate.getMonth() + 1;
+            var options = { month: 'long'};
             
             let today = new Date();
             let hours = today.getHours();
@@ -111,7 +114,7 @@ fetch(UPCOMING_LAUNCH_URL)
     
          
     
-            let month = launchDate.getMonth() + 1;
+            console.log(new Intl.DateTimeFormat('en-US', options).format(month));
     
             
     
@@ -121,9 +124,10 @@ fetch(UPCOMING_LAUNCH_URL)
             <div class="event_details">
                 <div class="d-flex mb-4">
                     <div class="date">
-                    <span>${year}</span>0${month}-${date}
+                    <span>${year}</span>
                     </div>
                     <div class="time-location">
+                    <p><span class="dato">${date}.${new Intl.DateTimeFormat('en-US', options).format(month)}</span></p>
                         <p>${hours}:${min} AM</p>
                         <p>${previous[i].name}</p>
                     </div>

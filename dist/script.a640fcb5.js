@@ -18346,7 +18346,7 @@ module.hot.accept(reloadCSS);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+}); // Herocard 
 
 function displayNextLaunch(data) {
   var nextLaunchContainer = document.querySelector(".next-launch");
@@ -18358,7 +18358,6 @@ function displayNextLaunch(data) {
   };
   var today = new Date();
   var hours = today.getHours();
-  console.log(data);
   nextLaunchContainer.innerHTML = "  \n  <small class=\"jumbotronCategory \" id=\"jumbotronCategory\">\n  " + (today > launchDate.getTime() ? "Last Launch Was:" : "Next Launch") + "\n  </small>\n  <h3 class=\"jumbotronHeaderone\">" + new Intl.DateTimeFormat("en-US", options).format(month) + "<span class=\"year\">" + year + "</span></h3>\n  <h5 class=\"jumbotronHeadertwo\">" + data.name + "</span></h5>\n  <p class =\"Flight-nr\">Flight-nr: " + data.flight_number + "</p>\n  <p class=\"lead\">\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Start at " + hours + "pm</a>\n  </p>\n  ";
   setInterval(function () {
     var nextLaunchDate = new Date(data.date_local);
@@ -18795,11 +18794,15 @@ function displayPreviousLanuches(previous) {
     var launchDate = new Date(previous[i].date_local);
     var year = launchDate.getFullYear();
     var date = launchDate.getDate();
+    var month = launchDate.getMonth() + 1;
+    var options = {
+      month: 'long'
+    };
     var today = new Date();
     var hours = today.getHours();
     var min = today.getMinutes();
-    var month = launchDate.getMonth() + 1;
-    html += "\n            <div class=\"col-12 col-lg-6 col-md-6 \">\n            <div class=\"event_details\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"date\">\n                    <span>" + year + "</span>0" + month + "-" + date + "\n                    </div>\n                    <div class=\"time-location\">\n                        <p>" + hours + ":" + min + " AM</p>\n                        <p>" + previous[i].name + "</p>\n                    </div>\n                </div>\n                <div  class=\"row\">\n                <div id=\"module\" class=\"\">\n                <p class=\"collapse\" id=\"collapseExample\" aria-expanded=\"false\">\n                " + previous[i].details + "\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\"\n                    aria-controls=\"collapseExample\"></a>\n            </div>\n             \n                </div>\n            </div>\n        </div>\n    ";
+    console.log(new Intl.DateTimeFormat('en-US', options).format(month));
+    html += "\n            <div class=\"col-12 col-lg-6 col-md-6 \">\n            <div class=\"event_details\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"date\">\n                    <span>" + year + "</span>\n                    </div>\n                    <div class=\"time-location\">\n                    <p><span class=\"dato\">" + date + "." + new Intl.DateTimeFormat('en-US', options).format(month) + "</span></p>\n                        <p>" + hours + ":" + min + " AM</p>\n                        <p>" + previous[i].name + "</p>\n                    </div>\n                </div>\n                <div  class=\"row\">\n                <div id=\"module\" class=\"\">\n                <p class=\"collapse\" id=\"collapseExample\" aria-expanded=\"false\">\n                " + previous[i].details + "\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\"\n                    aria-controls=\"collapseExample\"></a>\n            </div>\n             \n                </div>\n            </div>\n        </div>\n    ";
   }
 
   previousLaunchesContainer.innerHTML = html;
@@ -18832,7 +18835,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51530" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59497" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
