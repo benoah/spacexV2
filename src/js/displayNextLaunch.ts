@@ -5,13 +5,16 @@ export default function displayNextLaunch(data:any) {
   let year = launchDate.getFullYear();
   let month = launchDate.getMonth() + 1;
   let options = { month: "long" };
-  let today = new Date();
+  let today:any = new Date();
   let hours = today.getHours();
 
 
+  console.log(data);
+  
+
   nextLaunchContainer.innerHTML = `  
   <small class="jumbotronCategory " id="jumbotronCategory">
-  ${today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
+  ${today > launchDate.getTime() ? "Last Launch Was:" : "Next Launch"}
   </small>
   <h3 class="jumbotronHeaderone">${new Intl.DateTimeFormat("en-US", options).format(month)}<span class="year">${year}</span></h3>
   <h5 class="jumbotronHeadertwo">${data.name}</span></h5>
@@ -25,8 +28,10 @@ export default function displayNextLaunch(data:any) {
   setInterval(() => {
 
       const nextLaunchDate = new Date(data.date_local);
+    
+      
       const countDownDate = new Date(nextLaunchDate).getTime();
-
+      
 
       const day = document.querySelector("#days");
       const hrs = document.querySelector("#hours");
@@ -34,7 +39,10 @@ export default function displayNextLaunch(data:any) {
       const seconds = document.querySelector("#sec");
       const nextLanunchText = document.querySelector(".style h5");
 
+    
       const today = new Date().getTime();
+
+
       if (countDownDate > today) {
           const timeRemaining = countDownDate - today;
           let sec = Math.floor(timeRemaining / 1000);

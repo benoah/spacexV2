@@ -18358,7 +18358,8 @@ function displayNextLaunch(data) {
   };
   var today = new Date();
   var hours = today.getHours();
-  nextLaunchContainer.innerHTML = "  \n  <small class=\"jumbotronCategory \" id=\"jumbotronCategory\">\n  " + (today < launchDate.getTime() ? "Last Launch Was:" : "Next Launch") + "\n  </small>\n  <h3 class=\"jumbotronHeaderone\">" + new Intl.DateTimeFormat("en-US", options).format(month) + "<span class=\"year\">" + year + "</span></h3>\n  <h5 class=\"jumbotronHeadertwo\">" + data.name + "</span></h5>\n  <p class =\"Flight-nr\">Flight-nr: " + data.flight_number + "</p>\n  <p class=\"lead\">\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Start at " + hours + "pm</a>\n  </p>\n  ";
+  console.log(data);
+  nextLaunchContainer.innerHTML = "  \n  <small class=\"jumbotronCategory \" id=\"jumbotronCategory\">\n  " + (today > launchDate.getTime() ? "Last Launch Was:" : "Next Launch") + "\n  </small>\n  <h3 class=\"jumbotronHeaderone\">" + new Intl.DateTimeFormat("en-US", options).format(month) + "<span class=\"year\">" + year + "</span></h3>\n  <h5 class=\"jumbotronHeadertwo\">" + data.name + "</span></h5>\n  <p class =\"Flight-nr\">Flight-nr: " + data.flight_number + "</p>\n  <p class=\"lead\">\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Start at " + hours + "pm</a>\n  </p>\n  ";
   setInterval(function () {
     var nextLaunchDate = new Date(data.date_local);
     var countDownDate = new Date(nextLaunchDate).getTime();
@@ -18831,7 +18832,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54024" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51530" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
