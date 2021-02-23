@@ -10589,29 +10589,15 @@ a {
   mix-blend-mode: color-dodge;
 }
 
-.footer {
-  margin-top: 80px;
-  background: rgba(222, 102, 0, 0.1);
+footer {
+  margin-top: 40px;
+  background-image: url(/altinay-dinc-LluELtL5mK4-unsplash.379e5d75.jpg);
+  padding: 16px;
+  mix-blend-mode: color-dodge;
 }
 
-.footer section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.footer section p {
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 14px;
-  color: #f1f1f1;
+.style {
+  color: #fc0;
 }
 
 .detail-container {
@@ -10675,6 +10661,10 @@ a {
 
 .dato {
   color: #fc0;
+}
+
+.countdown__counter {
+  color: #f1f1f1;
 }
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com

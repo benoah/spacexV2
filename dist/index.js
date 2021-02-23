@@ -117,64 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/form.ts":[function(require,module,exports) {
-"use strict";
+})({"../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var form = document.querySelector(".contact-form");
-form.addEventListener("submit", submitContactForm);
-
-function submitContactForm(event) {
-  console.log(event);
-  event.preventDefault();
-  var isValid = true;
-  var inputName = document.querySelector("#name");
-  var nameValue = inputName.value.trim().length;
-
-  if (nameValue === 0) {
-    document.querySelector(".error-name").style.display = "block";
-    isValid = false;
-  } else {
-    document.querySelector(".error-name").style.display = "none";
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
 
-  var inputEmail = document.querySelector("#email");
-  var emailValue = inputEmail.value.trim().length;
-
-  if (emailValue === 0) {
-    document.querySelector(".error-email").style.display = "block";
-    isValid = false;
-  } else {
-    document.querySelector(".error-email").style.display = "none";
-  }
-
-  if (validateEmail(email.value)) {
-    document.querySelector(".error-invalid-email").style.display = "none";
-  } else {
-    document.querySelector(".error-invalid-email").style.display = "block";
-    isValid = false;
-  }
-
-  displayMessage(isValid);
+  return bundleURL;
 }
 
-exports.default = submitContactForm;
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-function validateEmail(email) {
-  var regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return regEx.test(email);
-}
-
-function displayMessage(validation) {
-  if (validation) {
-    var ThanYouMessage = document.querySelector(".success-message");
-    form.style.display = "none";
-    ThanYouMessage.style.display = "block";
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
   }
+
+  return '/';
 }
-},{}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -378,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js","js/form.ts"], null)
-//# sourceMappingURL=/form.a798918b.js.map
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map
